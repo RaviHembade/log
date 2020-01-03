@@ -1,0 +1,11 @@
+[Unit]
+Description=DX-Things Syslog Parser Service (Messages)
+After=multi-user.target
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/bin/python /home/dxlroot/syslog/parse_messages.py
+
+[Install]
+WantedBy=multi-user.target

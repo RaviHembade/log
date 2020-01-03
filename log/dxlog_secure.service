@@ -1,0 +1,11 @@
+[Unit]
+Description=DX-Things Syslog Parser Service
+After=multi-user.target
+
+[Service]
+Type=idle
+User=dxlroot
+ExecStart=/usr/bin/python <path-to-folder>/parse_secure.py
+
+[Install]
+WantedBy=multi-user.target
